@@ -126,7 +126,8 @@ class ADExplorerSnapshot(object):
             self.log.success(f"Output written to {outputfile}")
 
     def outputBloodHound(self):
-        self.preprocessCached()
+        # self.preprocessCached() <- fixed
+        self.preprocess()
 
         self.numUsers = 0
         self.numGroups = 0
